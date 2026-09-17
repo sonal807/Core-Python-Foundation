@@ -1,0 +1,93 @@
+========================================
+        PIP FREEZE - PYTHON
+========================================
+
+Definition:
+pip freeze is a command used to display all installed Python
+packages and their exact versions in the current environment.
+
+
+1. Basic Command
+----------------
+
+pip freeze
+
+
+2. Example Output
+------------------
+
+certifi==2026.7.22
+charset-normalizer==3.5.1
+idna==3.19
+numpy==2.5.3
+requests==2.34.2
+urllib3==2.8.0
+
+
+3. Save Packages to requirements.txt
+-------------------------------------
+
+pip freeze > requirements.txt
+
+This saves all installed packages and their versions into
+the requirements.txt file.
+
+
+4. Difference Between pip list and pip freeze
+---------------------------------------------
+
+pip list:
+- Displays installed packages in a readable table.
+- Mainly useful for checking installed packages.
+
+pip freeze:
+- Displays packages in requirements.txt format.
+- Useful for recording project dependencies.
+
+
+5. Installing Dependencies Later
+---------------------------------
+
+pip install -r requirements.txt
+
+This installs the packages listed in requirements.txt.
+
+
+6. Important Note
+-----------------
+
+pip freeze works with the currently active Python environment.
+
+Therefore, if a virtual environment is active, it shows
+the packages installed inside that virtual environment.
+
+
+7. Useful Workflow
+------------------
+
+Create virtual environment:
+python -m venv .venv
+
+Activate virtual environment:
+.venv\Scripts\Activate.ps1
+
+Install packages:
+pip install numpy requests
+
+Check installed packages:
+pip freeze
+
+Save dependencies:
+pip freeze > requirements.txt
+
+Installs all packages from the file:
+pip install -r requirements.txt
+
+8. AI Engineer Relevance
+------------------------
+
+requirements.txt and pip freeze are important for managing
+project dependencies and making Python projects reproducible.
+
+They are commonly used when working with AI/ML libraries
+and deploying Python projects.
